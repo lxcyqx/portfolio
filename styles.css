@@ -87,6 +87,13 @@ a:hover {
   padding-right: 10%;
 }
 
+.grid-small {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 4vw;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -175,6 +182,21 @@ a:hover {
 
 .project:hover .overlay {
   opacity: 1;
+}
+
+.project-title-small {
+  color: white;
+  font-size: 1.7em;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-30%, -50%);
+  width: 80%;
+  font-weight: 500;
+}
+
+.dark {
+  color: #555;
 }
 
 .project-title {
@@ -306,6 +328,11 @@ a {
   width: 39%;
 }
 
+.flex-image {
+  width: 40%;
+  padding: 10px;
+}
+
 figcaption {
   font-size: 12px;
   text-align: center;
@@ -313,9 +340,22 @@ figcaption {
   padding-bottom: 12px;
 }
 
+.videowrapper {
+  position: relative;
+  padding-bottom: 56.45%;
+  height: 0;
+}
+.videowrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 table {
   display: block;
-  margin: auto;
+  margin: 0 auto;
   color: #707070;
   width: 100%;
   max-width: 1000px;
@@ -386,19 +426,29 @@ table {
     width: 40%;
   }
 }
+
+@media (max-width: 600px) {
+  .greeting {
+    font-size: 3em;
+  }
+}
 @media (max-width: 800px) {
+  .project-title-small {
+    font-size: 1em;
+  }
   .nav-links {
     position: absolute;
     right: 0;
-    height: 90vh;
-    top: 14vh;
+    height: 50%;
+    top: 14%;
     background-color: #fffcf8;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    transform: translate(100%);
-    transition: transform 0.5s ease-in;
+    width: 100%;
+    /* transform: translate(100%); */
+    opacity: 0;
+    /* transition: all 0.5s ease 0.2s; */
     z-index: 1000;
   }
 
@@ -465,14 +515,32 @@ table {
     max-width: 100%;
     padding: 0 4px;
   }
+
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.3s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.4s;
+  }
+  li.fade {
+    opacity: 1;
+  }
 }
 
 .nav-active {
-  transform: translate(0%);
+  /* transform: translate(0%); */
+  opacity: 1;
   z-index: 1000;
+  transition: all 0.5s ease 0.2s;
 }
 
-@keyframes navLinkFade {
+/* @keyframes navLinkFade {
   from {
     opacity: 0;
     transform: translate(50px);
@@ -481,7 +549,7 @@ table {
     opacity: 1;
     transform: translate(0px);
   }
-}
+} */
 
 .toggle .line1 {
   transform: rotate(-45deg) translate(0, 11.5px);
