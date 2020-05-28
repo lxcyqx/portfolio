@@ -116,7 +116,6 @@
   display: block;
   padding: 6px 10px;
   border-radius: 4px;
-  background-color: #111111;
   position: fixed;
   top: 48vh;
   z-index: 500;
@@ -124,6 +123,10 @@
   color: white;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+img.img-btn-next {
+  height: 20px;
 }
 
 .img-btn-next:hover {
@@ -134,7 +137,6 @@
   display: block;
   padding: 6px 10px;
   border-radius: 4px;
-  background-color: #111111;
   position: fixed;
   top: 48vh;
   z-index: 500;
@@ -142,6 +144,10 @@
   color: white;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+img.img-btn-prev {
+  height: 20px;
 }
 
 .img-btn-prev:hover {
