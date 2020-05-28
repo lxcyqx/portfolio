@@ -153,3 +153,22 @@ img.img-btn-prev {
 .img-btn-prev:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 800px) {
+  #index-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "img7" "img8" "img9" "img10" "img11" "img12";
+  }
+
+  #index-gallery .gallery-img {
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+}
