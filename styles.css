@@ -165,6 +165,7 @@ a:hover {
   background-color: #92d3c7;
   transition: all 0.4s ease-in-out;
   text-align: center;
+  cursor: pointer;
 }
 
 .overlay.eyetracking {
