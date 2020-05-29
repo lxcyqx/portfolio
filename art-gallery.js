@@ -22,41 +22,44 @@ let imagesArray = [
 
 let getLatestOpenedImgIndex;
 let frames = document.querySelectorAll(".art-container");
-if (frames) {
-  frames.forEach(function(frame, index) {
-    frame.onclick = function() {
-      let imageName = frame.children[0].src.split(
-        "images/fine-art/thumbnails/"
-      )[1];
-      getLatestOpenedImgIndex = imagesArray.indexOf(imageName);
-      let container = document.body;
-      let newImageWindow = document.createElement("div");
-      container.appendChild(newImageWindow);
-      newImageWindow.setAttribute("class", "img-window");
-      newImageWindow.setAttribute("onclick", "closeImg()");
 
-      let newImage = document.createElement("img");
-      newImageWindow.appendChild(newImage);
-      newImage.setAttribute("src", "images/fine-art/" + imageName);
-      newImage.setAttribute("id", "current-img");
+function init() {
+  if (frames) {
+    frames.forEach(function(frame, index) {
+      frame.onclick = function() {
+        let imageName = frame.children[0].src.split(
+          "images/fine-art/thumbnails/"
+        )[1];
+        getLatestOpenedImgIndex = imagesArray.indexOf(imageName);
+        let container = document.body;
+        let newImageWindow = document.createElement("div");
+        container.appendChild(newImageWindow);
+        newImageWindow.setAttribute("class", "img-window");
+        newImageWindow.setAttribute("onclick", "closeImg()");
 
-      newImage.onload = function() {
-        let newNextBtn = document.createElement("img");
-        container.appendChild(newNextBtn);
-        newNextBtn.setAttribute("src", "images/right-arrow.png");
-        newNextBtn.setAttribute("class", "img-btn-next");
-        newNextBtn.setAttribute("onclick", "changeImg(1)");
-        newNextBtn.style.cssText = "right: 20px";
+        let newImage = document.createElement("img");
+        newImageWindow.appendChild(newImage);
+        newImage.setAttribute("src", "images/fine-art/" + imageName);
+        newImage.setAttribute("id", "current-img");
 
-        let newPrevBtn = document.createElement("img");
-        container.appendChild(newPrevBtn);
-        newPrevBtn.setAttribute("src", "images/left-arrow.png");
-        newPrevBtn.setAttribute("class", "img-btn-prev");
-        newPrevBtn.setAttribute("onclick", "changeImg(0)");
-        newPrevBtn.style.cssText = "left: 20px";
+        newImage.onload = function() {
+          let newNextBtn = document.createElement("img");
+          container.appendChild(newNextBtn);
+          newNextBtn.setAttribute("src", "images/right-arrow.png");
+          newNextBtn.setAttribute("class", "img-btn-next");
+          newNextBtn.setAttribute("onclick", "changeImg(1)");
+          newNextBtn.style.cssText = "right: 20px";
+
+          let newPrevBtn = document.createElement("img");
+          container.appendChild(newPrevBtn);
+          newPrevBtn.setAttribute("src", "images/left-arrow.png");
+          newPrevBtn.setAttribute("class", "img-btn-prev");
+          newPrevBtn.setAttribute("onclick", "changeImg(0)");
+          newPrevBtn.style.cssText = "left: 20px";
+        };
       };
-    };
-  });
+    });
+  }
 }
 
 /**
@@ -94,3 +97,5 @@ function changeImg(changeDir) {
 function closeImg() {
   document.querySelector(".img-window").remove();
 }
+
+init();
