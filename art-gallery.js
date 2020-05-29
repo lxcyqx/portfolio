@@ -25,9 +25,10 @@ let frames = document.querySelectorAll(".art-container");
 if (frames) {
   frames.forEach(function(frame, index) {
     frame.onclick = function() {
-      getLatestOpenedImgIndex = index;
-      console.log(getLatestOpenedImgIndex);
-      let imageName = frame.children[0].src.split("images/fine-art/")[1];
+      let imageName = frame.children[0].src.split(
+        "images/fine-art/thumbnails/"
+      )[1];
+      getLatestOpenedImgIndex = imagesArray.indexOf(imageName);
       let container = document.body;
       let newImageWindow = document.createElement("div");
       container.appendChild(newImageWindow);
@@ -63,7 +64,6 @@ if (frames) {
  * @param {prev or next direction} changeDir
  */
 function changeImg(changeDir) {
-  //   console.log(getLatestOpenedImgIndex);
   //close current image
   document.querySelector("#current-img").remove();
   let getImgWindow = document.querySelector(".img-window");
