@@ -443,12 +443,12 @@ table {
     height: 50%;
     top: 14%;
     background-color: #fffcf8;
-    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     /* transform: translate(100%); */
     opacity: 0;
+    display: none;
     /* transition: all 0.5s ease 0.2s; */
     z-index: 1000;
   }
@@ -540,6 +540,7 @@ table {
 .nav-active {
   /* transform: translate(0%); */
   opacity: 1;
+  display: flex;
   z-index: 1000;
   transition: all 0.5s ease 0.2s;
 }
