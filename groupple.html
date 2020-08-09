@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lucy Qu - Groupple</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Lucy Qu</a>
+      </div>
+
+      <ul class="nav-links white">
+        <li>
+          <a href="index.html">Projects</a>
+        </li>
+        <li>
+          <a href="other.html">Other</a>
+        </li>
+        <li>
+            <a href="Resume.pdf" target="blank">Resume</a>
+          </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="outer-container">
+      <div class="title">
+        STEP Capstone: Groupple
+      </div>
+      <img
+        class="large-image"
+        src="images/projects/cover/groupple-cover.png"
+        alt="Capstone project cover image"
+      />
+      <div class="container">
+        <div class="subtitle iterative">Context</div>
+        <div class="body-text">
+          This project was made during my STEP intership at Google. The goal was to create a web application using the Java Servlet framework we had learned during our starter projects.
+        </div>
+        <div class="body-text">
+          My teammates were
+          <a href="https://www.linkedin.com/in/himaniyadav/" target="_blank"
+            >Himani Yadav</a
+          > and
+          <a href="https://www.linkedin.com/in/anikabagga/" target="_blank"
+            >Anika Bagga</a
+          >
+        </div>
+        <div class="body-text">
+            Check out the website <a href="http://groupple.ue.r.appspot.com/" target="_blank">here</a>.
+          </div>
+        
+        <div class="subtitle">
+          Background
+        </div>
+        <div class="body-text">
+          With the way the COVID-19 pandemic has affected the nature of many interpersonal relationships, we were inspired to create a social media website to help people stay connected with their social circle. Through a website focused on completing challenges, we hope to engage people through creating groups, completing fun activities, and sharing their progress with members of their groups.
+        </div>
+
+        <div class="subtitle">
+          Figma Prototype
+        </div>
+        <div class="body-text">
+          During the ideation process, I created a Figma prototype to lay down the backbones for the UI of the website. Then, in collaboration with my teammates, we finalized upon the design, which later aided in our coding process since it reduced any misinterpretations we had about the features and we had a reference for layout.
+        </div>
+
+        <div class="videowrapper">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="auto" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FMTV3SjymMh5qitX99AYpak%2FCapstone-Hi-fi-Prototype%3Fnode-id%3D2%253A116%26scaling%3Dmin-zoom&chrome=DOCUMENTATION" allowfullscreen></iframe>
+        </div>
+
+        <br />
+        <div class="subtitle">
+          My Features
+        </div>
+
+        <div class="body-text">
+          Features I worked on for this project included creating polling functionality, updating weekly challenges, implementing a predictive search algorithm and a ranking algorithm based on levels of connections between members, and ability to join new groups by navigating to the group url. The design document for the predictive search and ranking algorithm implementations can be found <a href="images/projects/groupple/design-doc.pdf">here.</a>
+        </div>
+        <br />
+        <div class="body-text bold">
+          Polling
+        </div>
+
+        <div class="body-text">
+          When navigating to a group that does not have a challenge, the user can input a poll option and vote on their option to populate the weekly challenge. They can vote on other polling options as well as add additional polls. The options are ranked based on number of user votes, and every seven days, the challenge is updated to be the top most voted option.
+        </div>
+        <video class="video" width="100%" controls>
+            <source src="images/projects/groupple/polling.mov" type="video/mp4">
+          </video>
+
+        <br/>
+        <br/>
+        <br/>
+        <div class="body-text bold">
+            Predictive Search
+        </div>
+  
+        <div class="body-text">
+            Members of a group can add other users to the group by searching up their name, which uses predictive search, taking into account autocorrect, autocomplete, and whitespace to list suggested user names in order of best match.
+        </div>
+        <video class="video" width="100%" controls>
+            <source src="images/projects/groupple/predictive-search.mp4" type="video/mp4">
+        </video>
+  
+        <br />
+        <br />
+        <br />
+
+        <div class="body-text bold">
+            Ranking Users
+        </div>
+  
+        <div class="body-text">
+            Upon searching for a name and then pressing enter, matching and related users will show up in order of connection with the root user (the user doing the search). In the first example, Nico Rodriguez is already in a group with me so when I search up "Rodriguez" in another group and press enter, Nico Rodriguez will be listed above other users. In the second example, I am in a group with Connie Lin, who is in a gorup with Aaliyah Odom, so when I search up Aaliyah, the user Aaliyah Odom will be listed above other users because she has a closer connection to me than the other users.
+        </div>
+        <video class="video" width="100%" controls>
+            <source src="images/projects/groupple/direct-friend.mov" type="video/mp4">
+        </video>
+        <video class="video" width="100%" controls>
+            <source src="images/projects/groupple/friend-of-friend.mov" type="video/mp4">
+        </video>
+  
+        <br />
+
+        <div class="subtitle">
+            Other Features
+        </div>
+        <div class="body-text">
+          The features my teammates worked on include: profile page, adding posts and comments, group tags (using TF-IDF), and location based restaurant recommendations (hopefully this will be useful when it is safer to meet up with people).
+        </div>
+
+        <div class="body-text bold">
+          Profile Page
+        </div>
+
+        <video class="video" width="100%" controls>
+            <source src="images/projects/groupple/profile.webm" type="video/mp4">
+        </video>
+
+        <br />
+        <br/>
+        <br/>
+        <div class="body-text bold">
+            Posts
+        </div>
+  
+        <video class="video" width="100%" controls>
+            <source src="images/projects/groupple/posts.webm" type="video/mp4">
+        </video>
+
+        <br />
+        <br/>
+        <br/>
+        <div class="body-text bold">
+            Group Tags
+        </div>
+        
+        <div class="body-text">
+            Group tags are generated using TF-IDF and give insight into what members of a particular group talk about most. 
+        </div>
+        <video class="video" width="100%" controls>
+            <source src="images/projects/groupple/group-tags.webm" type="video/mp4">
+        </video>
+
+        <br />
+        <br/>
+        <br/>
+        <div class="body-text bold">
+            Near Group Recommendations
+        </div>
+        
+        <div class="body-text">
+            This features suggests the closest restaurants for all members in a group.
+        </div>
+        <img class="center" src="images/projects/groupple/maps.gif"></img>
+    
+        <br />
+        <div class="subtitle">
+          Conclusion
+        </div>
+        <div class="body-text">
+          Throughout the process of building this project, we pivoted focus to add in a couple of complex features, namely predictive search and user ranking, group tags, and restaurant recommendations. Because of this, we were not able to implemented all of the features included in the Figma mockup. I believe, however, that the complex features played well into the overall goals of the project as well as pushed us to come up with practical usages for various data structures and algorithms.
+        </div>
+    </div>
+    </div>
+   
+
+        
+      <br />
+      <div class="container">
+          <hr/>
+      </div>
+
+      <br />
+      <br>
+      <div class="body-text bold centered">
+        Other Projects
+      </div>
+      <div class="grid-container">
+          <div class="grid-small">
+            <div class="project">
+              <div class="project-image-container">
+                <a href="redesign.html">
+                  <img
+                    src="images/projects/cover/redesign-cover-gray.gif"
+                    alt="redesign cover image"
+                  />
+                  <div class="overlay redesign">
+                    <div class="project-title-small dark">
+                      Book Depository Redesign
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+    
+            <div class="project">
+              <div class="project-image-container">
+                <a href="eyetracking.html">
+                  <img
+                    src="images/projects/cover/eyetracking-cover.jpg"
+                    alt="eyetracking cover image"
+                  />
+                  <div class="overlay eyetracking">
+                    <div class="project-title-small">A/B Testing and Eye Tracking</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+      <br />
+      <br />
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/lucyqu/" target="_blank">
+        <img class="icon" src="images/linkedin.png" />
+      </a>
+      <a href="mailto:lucy_qu@brown.edu" target="_blank">
+        <img class="icon" src="images/email.png" />
+      </a>
+      <a href="https://github.com/lxcyqx" target="_blank">
+        <img class="icon" src="images/github.png" />
+      </a>
+    </div>
+    <footer class="footer">Made by Lucy Qu © 2020</footer>
+    <br />
+
+    <script src="app.js"></script>
+  </body>
+</html>

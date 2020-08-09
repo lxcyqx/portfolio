@@ -422,6 +422,17 @@ table {
   transition: all 0.3s ease-in;
 }
 
+.video {
+  outline: none;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 @media (max-width: 1000px) {
   .nav-links {
     width: 40%;
