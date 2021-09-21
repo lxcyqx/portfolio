@@ -144,6 +144,9 @@ a:hover {
   cursor: pointer;
 }
 
+.overlay.graphics {
+  background-color: #4474AA;
+}
 .overlay.groupple {
   background-color: #c5d6c8;
 }
