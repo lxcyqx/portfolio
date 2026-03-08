@@ -7,10 +7,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-6311ZXWZY9');
     </script>
     <link rel="shortcut icon" href="images/logo.png" />
+    <link href="https://api.fontshare.com/v2/css?f[]=editorial-new@700,400,300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,27 +18,11 @@
     <title>Lucy Qu</title>
   </head>
 
-  <body class="body-index">
+  <body>
     <nav>
-      <div class="logo">
-        <a href="index.html">Lucy Qu</a>
-      </div>
-
       <ul class="nav-links">
-        <li>
-          <a class="current-page" href="index.html" style="color: #555"
-            >Projects</a
-          >
-        </li>
-        <li>
-          <a href="other.html">Other</a>
-        </li>
-        <!-- <li>
-          <a href="Qu, Lucy_Resume.pdf" target="blank">Resume</a>
-        </li> -->
-        <li>
-          <a href="about.html">About</a>
-        </li>
+        <li><a href="index.html" style="color: #111;">Home</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
 
       <div class="burger">
@@ -48,124 +32,197 @@
       </div>
     </nav>
 
-    <div class="header">
-      <div class="greeting">Hi, I'm Lucy Qu</div>
-      <div class="description">
-        I'm a software engineer at Google currently working on UX experiments.
+    <div class="home-hero">
+      <h1 class="home-name">Lucy Qu</h1>
+      <div class="home-divider"></div>
+      <div class="home-role-wrap">
+        <div class="home-role" id="home-role">software engineer</div>
       </div>
     </div>
 
-    <div class="grid-container">
+    <div class="grid-container" id="projects">
+
+      <div class="section-label">Engineering &amp; Design</div>
+
       <div class="grid">
+
         <div class="project">
           <div class="project-image-container">
             <a href="graphics.html">
-              <img
-                src="images/projects/cover/trees.png"
-                alt="graphics cover image"
-              />
-              <div class="overlay graphics">
-                <div class="project-title">
-                  Computer Graphics
-                </div>
-              </div>
+              <img src="images/projects/cover/trees.png" alt="Computer Graphics" />
             </a>
           </div>
+          <a href="graphics.html">
+            <div class="project-label">
+              Computer Graphics
+              <span class="label-category">Rendering &amp; Simulation</span>
+            </div>
+          </a>
         </div>
 
         <div class="project">
           <div class="project-image-container">
             <a href="groupple.html">
-              <img
-                src="images/projects/cover/groupple-cover.png"
-                alt="groupple cover image"
-              />
-              <div class="overlay groupple">
-                <div class="project-title">
-                  STEP
-                </div>
-              </div>
+              <img src="images/projects/cover/groupple-cover.png" alt="STEP" />
             </a>
           </div>
+          <a href="groupple.html">
+            <div class="project-label">
+              STEP
+              <span class="label-category">Software Engineering Internship</span>
+            </div>
+          </a>
         </div>
 
         <div class="project">
           <div class="project-image-container">
             <a href="iterative.html">
-              <img
-                src="images/projects/cover/iterative-cover.gif"
-                alt="iterative cover image"
-              />
-              <div class="overlay">
-                <div class="project-title">
-                  Iterative Design and User Testing
-                </div>
-              </div>
+              <img src="images/projects/cover/iterative-cover.gif" alt="Iterative Design" />
             </a>
           </div>
+          <a href="iterative.html">
+            <div class="project-label">
+              Iterative Design and User Testing
+              <span class="label-category">UX Design</span>
+            </div>
+          </a>
         </div>
 
         <div class="project">
           <div class="project-image-container">
             <a href="redesign.html">
-              <img
-                src="images/projects/cover/redesign-cover-gray.gif"
-                alt="redesign cover image"
-              />
-              <div class="overlay redesign">
-                <div class="project-title dark">
-                  Book Depository Redesign
-                </div>
-              </div>
+              <img src="images/projects/cover/redesign-cover-gray.gif" alt="Book Depository Redesign" />
             </a>
           </div>
+          <a href="redesign.html">
+            <div class="project-label">
+              Book Depository Redesign
+              <span class="label-category">Responsive Design</span>
+            </div>
+          </a>
         </div>
 
         <div class="project">
           <div class="project-image-container">
             <a href="eyetracking.html">
-              <img
-                src="images/projects/cover/eyetracking-cover.jpg"
-                alt="eyetracking cover image"
-              />
-              <div class="overlay eyetracking">
-                <div class="project-title">A/B Testing and Eye Tracking</div>
-              </div>
+              <img src="images/projects/cover/eyetracking-cover.jpg" alt="A/B Testing" />
             </a>
           </div>
+          <a href="eyetracking.html">
+            <div class="project-label">
+              A/B Testing and Eye Tracking
+              <span class="label-category">UX Research</span>
+            </div>
+          </a>
         </div>
 
         <div class="project">
           <div class="project-image-container">
             <a href="personas.html">
-              <img
-                src="images/projects/cover/personas-cover.jpg"
-                alt="personas cover image"
-              />
-              <div class="overlay personas">
-                <div class="project-title dark">Personas and Storyboarding</div>
-              </div>
+              <img src="images/projects/cover/personas-cover.jpg" alt="Personas" />
             </a>
           </div>
+          <a href="personas.html">
+            <div class="project-label">
+              Personas and Storyboarding
+              <span class="label-category">UX Research</span>
+            </div>
+          </a>
         </div>
+
+      </div>
+
+      <div class="section-label">Art &amp; Illustration</div>
+
+      <div class="grid">
+
+        <div class="project">
+          <div class="project-image-container">
+            <a href="fine-art.html">
+              <img src="images/fine-art/thumbnails/pagan.jpg" alt="Fine Art" />
+            </a>
+          </div>
+          <a href="fine-art.html">
+            <div class="project-label">
+              Fine Art
+              <span class="label-category">Oil, Monotype &amp; Drawing</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="project">
+          <div class="project-image-container">
+            <a href="digital.html">
+              <img src="images/digital/landscape.jpg" alt="Digital" />
+            </a>
+          </div>
+          <a href="digital.html">
+            <div class="project-label">
+              Digital
+              <span class="label-category">Digital Illustration</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="project">
+          <div class="project-image-container">
+            <a href="animation.html">
+              <img src="images/animation/character.png" alt="Animation" />
+            </a>
+          </div>
+          <a href="animation.html">
+            <div class="project-label">
+              Animation
+              <span class="label-category">Motion &amp; Character</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="project">
+          <div class="project-image-container">
+            <a href="architecture.html">
+              <img src="images/spatial-prototype.jpg" alt="Architecture" />
+            </a>
+          </div>
+          <a href="architecture.html">
+            <div class="project-label">
+              Architecture
+              <span class="label-category">Spatial Design</span>
+            </div>
+          </a>
+        </div>
+
       </div>
     </div>
-    <br />
-    <br />
-    <br />
+
     <div class="icons">
       <a href="https://www.linkedin.com/in/lucyqu/" target="_blank">
-        <img class="icon" src="images/linkedin.png" />
+        <img class="icon" src="images/linkedin.png" alt="LinkedIn" />
       </a>
       <a href="mailto:lucyqu_@alumni.brown.edu" target="_blank">
-        <img class="icon" src="images/email.png" />
+        <img class="icon" src="images/email.png" alt="Email" />
       </a>
       <a href="https://github.com/lxcyqx" target="_blank">
-        <img class="icon" src="images/github.png" />
+        <img class="icon" src="images/github.png" alt="GitHub" />
       </a>
     </div>
-    <footer class="footer">Made by Lucy Qu © 2024</footer>
-    <br />
+    <footer class="footer">Made by Lucy Qu &copy; 2024</footer>
+
     <script src="app.js"></script>
+    <script>
+      const roles = ['software engineer', 'artist', 'designer', 'builder'];
+      let idx = 0;
+      const el = document.getElementById('home-role');
+      setInterval(() => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(8px)';
+        setTimeout(() => {
+          idx = (idx + 1) % roles.length;
+          el.textContent = roles[idx];
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 350);
+      }, 2600);
+    </script>
   </body>
 </html>
