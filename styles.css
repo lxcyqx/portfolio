@@ -102,7 +102,7 @@ a:hover {
 }
 
 .home-name {
-  font-family: 'Editorial New', Georgia, serif;
+  font-family: 'Panchang', Georgia, serif;
   font-size: clamp(4.5rem, 10vw, 9.5rem);
   font-weight: 400;
   letter-spacing: -0.02em;
